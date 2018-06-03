@@ -16,4 +16,5 @@ function createPost() {
 
   postDiv.innerHTML = templateHTML;
   postDiv.getElementsByTagName("footer")[0].innerHTML = commentsSection;
+
 }
