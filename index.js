@@ -18,3 +18,14 @@ function createPost() {
   postDiv.getElementsByTagName("footer")[0].innerHTML = commentsSection;
 
 }
+
+function postComment() {
+
+  var commenter = document.getElementById("commenter").value;
+  var comment = document.getElementById("comment").value;
+
+  var commentTemplate = _.template(document.getElementById("comment-template").innerHTML);
+
+  var commentsDiv = document.getElementById("comments");
+   commentsDiv.innerHTML += commentTemplate({ 'commenter': commenter, 'comment': comment });
+}
